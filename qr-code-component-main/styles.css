@@ -1,13 +1,20 @@
+:root {
+    --white-color :hsl(0, 0%, 100%)
+;
+    --grey-white:hsl(212, 45%, 89%);
+    --light-text:hsl(216, 15%, 48%);
+    --deep-text:hsl(218, 44%, 22%);
+}
 * {
     font-family: 'Outfit', sans-serif;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .wrapper {
-        max-width: 320px;
+        max-width: 20rem;
     }
 }
 body {
-    background-color: hsl(212, 45%, 89%);
+    background-color:var(--grey-white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,14 +25,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:20px;
+    padding:clamp(15px, 20px, 30px);
     width: 100vh;
     max-width: 375px;
     /* background-color: aqua; */
 }
 
 .card {
-    background-color:hsl(0, 0%, 100%);
+    background-color:var(--white-color);
     border-radius: 20px;
     padding: 16px;
     text-align: center;
@@ -48,7 +55,7 @@ h1 {
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 25px;
-    color: hsl(218, 44%, 22%);
+    color: var(--deep-text);
 
 }
 
@@ -56,5 +63,5 @@ p {
     padding: 0 8px;
     font-size: 15px;
     font-weight: 400;
-    color: hsl(216, 15%, 48%);
+    color:var(--light-text);
 }
